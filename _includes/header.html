@@ -1,0 +1,87 @@
+<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 120, 'stickyHeaderContainerHeight': 70}">
+        <div class="header-body">
+            <div class="header-container container">
+                <div class="header-row">
+                    <div class="header-column">
+                        <div class="header-row">
+                            <div class="header-logo">
+                                <a href="index.html">
+                                    <img alt="Porto" height="100"   data-sticky-height="60" src="/assets/img/congnghesoanhson_logo_withtext.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-column justify-content-end">
+                        <div class="header-row">
+                            <div class="header-nav header-nav-links order-2 order-lg-1">
+                                <div class="header-nav-main header-nav-main-square header-nav-main-effect-2 header-nav-main-sub-effect-1">
+                                    <nav class="collapse">
+                                        <ul class="nav nav-pills" id="mainNav">
+                                            
+                                            {% for i in site.data.danhmuc %}
+                                            <li {% if i.sub %} class="dropdown" {% endif %} ><a class="dropdown-item dropdown-toggle {% if page.url == i.link %} active {% endif %}" href="{{ i.link }}">														
+                                                    {{ i.name }}	
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    
+                                                    {% for f in i.sub %}
+                                                          
+                                                        <li  {% if f.sub %}  class="dropdown-submenu" {% endif %}> <a class="dropdown-item" href="{{f.link}} ">{{ f.name }}</a>
+
+                                                        
+                                                        <ul class="dropdown-menu">
+
+                                                        {% for k in f.sub %}                                            
+                                                            <li><a class="dropdown-item" href="{{ k.link}}" >{{ k.name }}</a>
+                                                            </li>
+                                                        {% endfor %}
+
+                                                        </ul>
+                                                        </li>
+                                                    {% else %}    
+                                                    {% endfor %}
+
+                                                </ul>
+                                            </li>
+                                            {% endfor %}
+                                            
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main nav">
+                                    <i class="fas fa-bars"></i>
+                                </button>
+                            </div>
+                            <div class="header-nav-features header-nav-features-no-border header-nav-features-lg-show-border order-1 order-lg-2">
+                                <div class="header-nav-feature header-nav-features-search d-inline-flex"> <a href="#" class="header-nav-features-toggle" data-focus="headerSearch"><i class="fas fa-search header-nav-top-icon"></i></a>
+                                    <div class="header-nav-features-dropdown" id="headerTopSearchDropdown">
+                                        <form role="search" action="https://preview.oklerthemes.com/porto/7.4.0/page-search-results.html" method="get">
+                                            <div class="simple-search input-group">
+                                                <input class="form-control text-1" id="headerSearch" name="q" type="search" value="" placeholder="Search..."> <span class="input-group-append">															<button class="btn" type="submit">																<i class="fa fa-search header-nav-top-icon"></i>															</button>														</span> </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="header-nav-feature header-nav-features-cart d-inline-flex ml-2">
+                                    <a href="#" class="header-nav-features-toggle"> <img src="/assets/img/icons/icon-cart.svg" width="14" alt="" class="header-nav-top-icon-img"> <span class="cart-info">													<span class="cart-qty">1</span> </span>
+                                    </a>
+                                    <div class="header-nav-features-dropdown" id="headerTopCartDropdown">
+                                        <ol class="mini-products-list">
+                                            <li class="item">
+                                                <a href="#" title="Camera X1000" class="product-image"><img src="/assets/" alt="Camera X1000"></a>
+                                                <div class="product-details">
+                                                    <p class="product-name"> <a href="#">Camera X1000 </a> </p>
+                                                    <p class="qty-price"> 1X <span class="price">$890</span> </p> <a href="#" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a> </div>
+                                            </li>
+                                        </ol>
+                                        <div class="totals"> <span class="label">Total:</span> <span class="price-total"><span class="price">$890</span></span>
+                                        </div>
+                                        <div class="actions"> <a class="btn btn-dark" href="#">View Cart</a> <a class="btn btn-primary" href="#">Checkout</a> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>

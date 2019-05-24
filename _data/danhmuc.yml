@@ -1,0 +1,44 @@
+- name: Trang Chủ
+  link: /
+- name: Sản Phẩm
+  link: /sanpham
+  sub: 
+    - name: Chuột
+      link: /chuot
+      sub:
+        - name: Chuột không dây
+          link: /chuotkhongday
+          img: /assets/img/chuot.jpg
+        - name: Chuột có dây
+          link: /chuotcoday
+          img: /assets/img/chuot.jpg
+        - name: Chuột Gaming
+          link: /chuotgaming
+          img: /assets/img/chuot.jpg
+    - name: Bàn Phím
+      link: /banphim
+      sub:
+        - name: Bàn phím không dây
+          link: /banphimkhongday
+        - name: Bàn phím có dây
+          link: /banphimcoday
+    - name: Máy in
+      link: /mayin
+    - name: Máy tính
+      img: /maytinh
+      sub:
+        - name: Laptop
+          link: /laptop
+        - name: Máy tính bàn
+          link: /maytinhban
+- name: Dịch vụ
+  link: /dichvu
+  sub:
+      - name : Thiết kế website
+        link: /thietkewebsite
+      - name: Đổ mực máy in tại nhà
+        link: /domucmayintainha
+- name: Tin tức
+  link: /tintuc
+- name: Về chúng tôi
+  link: /vechungtoi
